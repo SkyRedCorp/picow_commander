@@ -1,0 +1,8 @@
+Keycode.GUI
+Keycode.R
+Keycode.M
+Keycode.UP_ARROW
+Keycode.ENTER
+Keycode.DELETE
+Keycode.DOWN_ARROW
+Keycode.L
