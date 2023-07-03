@@ -1,0 +1,44 @@
+html{
+    font-family: monospace; 
+    background-color: lightblue;
+    display:inline-block; 
+    margin: 0px auto; 
+    text-align: center;
+}
+
+h1{
+    color: blue; 
+    width: 200; 
+    word-wrap: 
+    break-word; 
+    padding: 2vh; 
+    font-size: 28px;
+}
+
+p{
+    font-size: 1.5rem; 
+    width: 200; 
+    word-wrap: break-word;
+}
+
+.button{
+    font-family: monospace;
+    display: inline-block;
+    background-color: black; 
+    border: none;
+    border-radius: 4px; 
+    color: white; 
+    padding: 10px 10px;
+    text-decoration: none; 
+    font-size: 20px; 
+    margin: 2px; 
+    cursor: pointer; 
+    width: 35%;
+}
+
+p.dotted {
+    margin: auto;
+    width: 75%; 
+    font-size: 25px; 
+    text-align: center;
+}
