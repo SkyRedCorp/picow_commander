@@ -1,13 +1,28 @@
-#Home Network Setup
-
+#Primary Network Setup
 CIRCUITPY_WIFI_SSID="WifiNetwork"
 CIRCUITPY_WIFI_PASSWORD="Apassw0rd123"
 CIRCUITPY_WEB_API_PASSWORD="Pic0W_Serv3r"
 
-#Office Network Setup
-
+#Alternative Network Setup
 CIRCUITPY_WIFI_SSID2="Another Wifi Netowrk"
 CIRCUITPY_WIFI_PASSWORD2="ItsJust4T3st."
 CIRCUITPY_WEB_API_PASSWORD2="Pic0W_Serv3r_OfF1ce"
 
 CIRCUITPY_WEB_API_PORT=80
+
+#List of commands
+rckrll="https://youtu.be/dQw4w9WgXcQ"
+txtpad="notepad"
+cshell="cmd"
+reboot="shutdown /r /t 10"
+cryptk="d71c7a8c1a4d2b642f5a55c1f5714d6e"
+cmdoff="shutdown /s /t 10"
+emailo="outlook"
+onenot="onenote"
+msedge="msedge"
+keystr="bb0b82414620197db4ca28cb4ac324c0"
+jokevd="https://matias.ma/nsfw/"
+chrome="chrome"
+frefox="firefox"
+spread="excel"
+docsed="winword"
