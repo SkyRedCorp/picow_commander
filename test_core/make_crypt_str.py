@@ -4,10 +4,10 @@
 
 """USE THIS FILE TO GENERATE THE ENCRYPTED STRING
    AND THE KEY STRING. AFTER THEN, COPY BOTH IN THE
-   SD FILE NAMED hexstring2.txt WITH THE FOLLOWING ORDER:
-       - Encrypted: ROW 5
-       - KeyString: ROW 10
-   THE main.py FILE WILL RECOGNIZE AS STRING 4 AND 9 RESPECTIVELY"""
+   FILE NAMED settings.toml IN THE FOLLOWING ORDER:
+       - Encrypted: cryptk
+       - KeyString: keystr
+   THE core/keystrokes.py FILE WILL RECOGNIZE AS cryptk and keystr VARIABLES"""
 
 import os
 import core.skrcrypt as skrcrypt
