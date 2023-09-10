@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                html{
+                    font-family: monospace; 
+                    background-color: black;
+                    display:inline-block; 
+                    margin: 0px auto; 
+                    text-align: center;
+                }
+                h1{
+                    color: red; 
+                    width: 200; 
+                    word-wrap: 
+                    break-word; 
+                    padding: 2vh; 
+                    font-size: 28px;
+                }
+                p{
+                    font-size: 1.5rem; 
+                    width: 200; 
+                    word-wrap: break-word;
+                }
+                .button{
+                    font-family: monospace;
+                    display: inline-block;
+                    background-color: white; 
+                    border: none;
+                    border-radius: 4px; 
+                    color: red; 
+                    padding: 10px 10px;
+                    text-decoration: none; 
+                    font-size: 20px; 
+                    margin: 2px; 
+                    cursor: pointer; 
+                    width: 35%;
+                }
+                p.dotted {
+                    margin: auto;
+                    width: 75%; 
+                    font-size: 25px; 
+                    text-align: center;
+                    color: lightgreen;
+                }
+            </style>
+        </head>
+        <body>
+            <title>SkyRed Web Commander</title>
+            <h1>Pico W HTTP Server</h1>
+            <br>
+            <p class="dotted">Here you can make some pranks</p>
+            <p class="dotted">So use this wisely</p>
+            <br>
+            <h1>Press the button according to the command you need</h1><br>
+        
+            <table>
+                <tr>
+                    <form accept-charset="utf-8" method="POST">
+                        <button class="button" name="BTN1" value="rickroll" type="submit">Rick Roll</button></a>
+                    </form>
+                    <form accept-charset="utf-8" method="POST">
+                        <button class="button" name="BTN2" value="joke" type="submit">Ditto</button></a>
+                    </form>
+                    <form accept-charset="utf-8" method="POST">
+                        <button class="button" name="BTN3" value="micejig" type="submit">Jiggle</button></a>
+                    </form>
+                    <form accept-charset="utf-8" method="POST">
+                        <button class="button" name="BTN4" value="txtpayload" type="submit">Hax-txt</button></a>
+                    </form>
+                </tr>
+                <p></p>
+                <tr>
+                    <form accept-charset="utf-8" method="POST">
+                        <button class="button" name="BTN5" value="youidiot" type="submit">You're an idiot</button></a>
+                    </form>
+                </tr>
+            </table>
+        </body>
+    </html>
