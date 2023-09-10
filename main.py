@@ -27,6 +27,9 @@ mdns_server.advertise_service(service_type="_http", protocol="_tcp", port=80)
 # Keystrokes library
 import core.keystrokes as keystrokes
 
+#OLED Panel
+from core import oledpanel
+
 # Random number library
 from random import randint
 
@@ -56,6 +59,10 @@ document_root = '/www'
 @server.route("/")
 def base(request: Request):
     return FileResponse(request, filename='index.html', root_path=document_root)
+
+@server.route("/badduck")
+def base(request: Request):
+    return FileResponse(request, filename='badduck.html', root_path=document_root)
 
 # Routing Server
 @server.route("/", POST)
@@ -134,11 +141,56 @@ def buttonpress(request: Request):
     
     return FileResponse(request, filename='index.html', root_path=document_root)
 
+# Redirect to Prank Commands
+@server.route("/badduck", POST)
+def buttonpress2(request: Request):
+    raw_text = request.raw_request.decode("utf8")
+    print(raw_text)
+    
+    # Payload select
+    if "rickroll" in raw_text:
+        keystrokes.minimus_win()
+        keystrokes.runas_app(os.getenv('rckrll'))
+        time.sleep(2)
+        keystrokes.fullscreen_video()
+        print("Time to rickroll")
+
+    elif "joke" in raw_text:
+        keystrokes.minimus_win()
+        keystrokes.runas_app(os.getenv('jokevd'))
+        time.sleep(0.4)
+        keystrokes.fullscreen_cmd()
+        print("NSFW hehe")
+
+    elif "micejig" in raw_text:
+        keystrokes.mice_jiggle()
+        print("Mouse Jiggle!")
+
+    elif "txtpayload" in raw_text:
+        keystrokes.runas_app(os.getenv('txtpad'))
+        print("Starting Notepad")
+        time.sleep(1)
+        for each in range(1, 10):
+            keystrokes.send_string()
+
+    elif "youidiot" in raw_text:
+        keystrokes.minimus_win()
+        keystrokes.runas_app(os.getenv('idothe'))
+        time.sleep(0.4)
+        keystrokes.fullscreen_cmd()
+        print("You're an Idiot, hahahahaha")
+    
+    else:
+        print("Unknown command")
+    
+    return FileResponse(request, filename='badduck.html', root_path=document_root)
+
 print("starting server..")
 # Start of Server
 try:
     server.start(str(wifi.radio.ipv4_address))
     print("Please access to: http://%s:80" % wifi.radio.ipv4_address)
+    oledpanel.ipadd("http://"+str(wifi.radio.ipv4_address))
 # In case the server fails, reboots the Pico W
 except OSError:
     time.sleep(5)
